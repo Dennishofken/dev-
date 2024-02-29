@@ -1,0 +1,24 @@
+{
+	"name": "C# (.NET)",
+	"image": "mcr.microsoft.com/devcontainers/dotnet:1-7.0",
+	"features": {
+		"ghcr.io/devcontainers/features/dotnet:2": {},
+		"ghcr.io/devcontainers-contrib/features/angular-cli:2": {},
+		"ghcr.io/devcontainers-contrib/features/node-asdf:0": {}
+	},
+	"forwardPorts": [5000, 5001, 7057, 44493],
+	"portsAttributes": {
+		"5001": {
+			"protocol": "https"
+		},
+		"7057": {
+			"protocol": "https"
+		},
+		"44493": {
+			"protocol": "https"
+		}
+	},
+	"mounts": [
+		"source=${APPDATA}/ASP.NET/https,target=/workspaces/https,type=bind,consistency=cached"
+	]
+}

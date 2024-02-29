@@ -19,6 +19,6 @@
 		}
 	},
 	"mounts": [
-		"source=${APPDATA}/ASP.NET/https,target=/workspaces/https,type=bind,consistency=cached"
+		"source=${localEnv:APPDATA}/ASP.NET/https,target=/home/vscode/.aspnet/https,type=bind",
 	]
 }

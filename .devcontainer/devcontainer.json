@@ -20,5 +20,11 @@
 	},
 	"mounts": [
 		"source=${localEnv:APPDATA}/ASP.NET/https,target=/home/vscode/.aspnet/https,type=bind"
-	]
+	],
+	"containerEnv": {
+		"ASPNETCORE_HTTPS_PORT": "7057",
+		"ASPNETCORE_Kestrel__Certificates__Default__Path": "/home/vscode/.aspnet/https/test.pem",
+		"ASPNETCORE_Kestrel__Certificates__Default__KeyPath": "/home/vscode/.aspnet/https/test.key"
+	},
+	"postCreateCommand": "sudo cp /home/vscode/.aspnet/https/test.pem /usr/local/share/ca-certificates/test.crt && sudo update-ca-certificates"
 }

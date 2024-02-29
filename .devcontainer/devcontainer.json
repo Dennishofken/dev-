@@ -19,6 +19,6 @@
 		}
 	},
 	"mounts": [
-		"source=${localEnv:APPDATA}/ASP.NET/https,target=/home/vscode/.aspnet/https,type=bind",
+		"source=${localEnv:APPDATA}/ASP.NET/https,target=/home/vscode/.aspnet/https,type=bind"
 	]
 }
